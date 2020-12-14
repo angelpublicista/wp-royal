@@ -1,0 +1,11 @@
+.bg-gradient-primary {
+  background: #fbbb01;
+  background: linear-gradient(270deg, #fbbb01 0%, #e0831f 100%);
+}
+
+.form-master {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/*# sourceMappingURL=custom-style.css.map */
