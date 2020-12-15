@@ -3,6 +3,8 @@
 get_header();
 ?>
 
+<?php if(is_user_logged_in()): ?>
+
 <?php  get_template_part('template-parts/subheader'); ?>
 
 <main class="rgc-main-packages-single">
@@ -140,5 +142,12 @@ get_header();
     </section>
 </main>
 
+<?php else: ?>
+    <section class="padding-section text-center rgc-user-block d-flex align-items-center justify-content-center flex-column">
+        <i class="fas fa-user-lock mb-4"></i>
+        <h2>Contenido restringido</h2>
+        <p>Si ya estás registrad@, debes <a href="#">Iniciar sesión</a> para ver este contenido</p>
+    </section>
+<?php endif; ?>
 <?php
 get_footer();
