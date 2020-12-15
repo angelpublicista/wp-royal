@@ -2,6 +2,7 @@
     font-size: 10pt
     margin: 2em
     position: relative
+    background-color: white
     &__image
         width: 100%
         height: 250px
@@ -16,6 +17,13 @@
     .rgc-buttons
         margin-bottom: -60px
 .rgc-content-package
+    border-radius: 20px
+    background-color: #F5F5F5
+    &__title
+        line-height: 1em
+        color: $primary-color
+    &__city
+        color: $secondary-color
     &__days
         font-size: 1.2em
         &-day
@@ -63,6 +71,12 @@
             font-weight: 600
             &:hover
                 color: darken($secondary-color, 7)
+    &__gallery
+        &-item
+            width: 100%
+            height: 600px
+            object-fit: cover
+            border-radius: 20px
 .rgc-box-offer
     width: 100px
     height: 100px

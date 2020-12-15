@@ -46,6 +46,12 @@
   background: #2D2D2D;
 }
 
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .rgc-sub-heading-section {
   color: white;
 }
@@ -73,6 +79,7 @@
   font-size: 10pt;
   margin: 2em;
   position: relative;
+  background-color: white;
 }
 .rgc-card-package__image {
   width: 100%;
@@ -92,6 +99,17 @@
   margin-bottom: -60px;
 }
 
+.rgc-content-package {
+  border-radius: 20px;
+  background-color: #F5F5F5;
+}
+.rgc-content-package__title {
+  line-height: 1em;
+  color: #010077;
+}
+.rgc-content-package__city {
+  color: #E0831F;
+}
 .rgc-content-package__days {
   font-size: 1.2em;
 }
@@ -151,6 +169,12 @@
 .rgc-content-package__info__link:hover {
   color: #c1711b;
 }
+.rgc-content-package__gallery-item {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
 .rgc-box-offer {
   width: 100px;
@@ -207,6 +231,88 @@
 }
 .slick-custom-rgc .slick-dots {
   bottom: -60px;
+}
+
+.rgc-search-box {
+  border-radius: 20px;
+  margin-top: 2em;
+  margin: 2em;
+  padding: 2em;
+  background-color: white;
+  margin-bottom: -100px;
+}
+.rgc-search-box .form-control {
+  padding: 0 0.5em;
+  font-family: "Nunito", sans-serif;
+  height: 50px;
+}
+.rgc-search-box .custom-select option {
+  font-family: "Nunito", sans-serif;
+}
+.rgc-search-box .fecha-none {
+  opacity: 0;
+}
+.rgc-search-box .rgc-button-search {
+  height: 50px;
+  margin-bottom: 1em;
+}
+.rgc-search-box .label-search {
+  color: #010077;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+.rgc-search-box .btn-search {
+  background-color: #010077;
+  font-weight: bold;
+  color: white;
+}
+.rgc-search-box .form-group {
+  margin-bottom: 0;
+}
+
+.rgc-package-features__box {
+  color: #2D2D2D;
+  font-size: 2em;
+}
+.rgc-package-features__box i {
+  color: #010077;
+}
+
+.rgc-package-conditions__box {
+  background-color: #010077;
+  color: white;
+}
+.rgc-package-conditions__box-title {
+  color: white;
+}
+.rgc-package-conditions__box p, .rgc-package-conditions__box ul {
+  color: white;
+  font-size: 0.9em;
+}
+
+.rgc-assesor__box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #010077;
+}
+.rgc-assesor__box i {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+.rgc-assesor__box a {
+  font-size: 1.5em;
+  color: #010077;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.rgc-assesor__box a:hover {
+  color: #2D2D2D;
+}
+.rgc-assesor div:nth-child(even) {
+  border-left: 2px solid #010077;
+  border-right: 2px solid #010077;
 }
 
 .form-master {

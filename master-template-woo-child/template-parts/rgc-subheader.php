@@ -22,7 +22,7 @@ global $geniorama;
                 </div>
 
                 <div class="rgc-search-bar">
-                    <h2>Barra de búsqueda</h2>
+                    <?php echo do_shortcode('[rgc_search_advanced]'); ?>
                 </div>
             </div>
         </div>
