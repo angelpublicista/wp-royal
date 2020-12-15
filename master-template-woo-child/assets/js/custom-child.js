@@ -41,4 +41,13 @@ jQuery(function ($) {
             // instead of a settings object
           ]
     });
+
+    $('.menu-item-has-children .nav-link').first().append(' <i class="fas fa-sort-down"></i>');
+    $('.menu-item-has-children').mouseenter(function(){
+        $(this).find('.sub-menu').slideDown();
+    });
+
+    $('.menu-item-has-children').mouseleave(function(){
+      $(this).find('.sub-menu').slideUp();
+  });
 });

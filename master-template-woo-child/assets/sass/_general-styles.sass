@@ -38,3 +38,34 @@
     background-size: cover
     background-position: center
     background-repeat: no-repeat
+
+.form-control
+    padding: 0 .5em !important
+    font-family: $secondary-font !important
+    height: 50px !important
+
+textarea.form-control
+    height: 150px !important
+    padding-top: 1em !important
+.custom-select
+    option
+        font-family: $secondary-font
+.menu-item-has-children
+    position: relative
+    display: block
+    .sub-menu
+        display: none
+        position: absolute
+        left: 0
+        z-index: 2
+        list-style: none
+        padding: 0
+        min-width: 150px
+        background: $dark
+        border-radius: 5px
+    i
+        margin-left: 5px
+        transform: translateY(-2px)
+    .menu-item
+        padding: .5em 1em
+        border-bottom: 1px solid #757575

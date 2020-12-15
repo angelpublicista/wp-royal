@@ -52,6 +52,45 @@
   background-repeat: no-repeat;
 }
 
+.form-control {
+  padding: 0 0.5em !important;
+  font-family: "Nunito", sans-serif !important;
+  height: 50px !important;
+}
+
+textarea.form-control {
+  height: 150px !important;
+  padding-top: 1em !important;
+}
+
+.custom-select option {
+  font-family: "Nunito", sans-serif;
+}
+
+.menu-item-has-children {
+  position: relative;
+  display: block;
+}
+.menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  min-width: 150px;
+  background: #2D2D2D;
+  border-radius: 5px;
+}
+.menu-item-has-children i {
+  margin-left: 5px;
+  transform: translateY(-2px);
+}
+.menu-item-has-children .menu-item {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #757575;
+}
+
 .rgc-sub-heading-section {
   color: white;
 }
@@ -240,14 +279,6 @@
   padding: 2em;
   background-color: white;
   margin-bottom: -100px;
-}
-.rgc-search-box .form-control {
-  padding: 0 0.5em;
-  font-family: "Nunito", sans-serif;
-  height: 50px;
-}
-.rgc-search-box .custom-select option {
-  font-family: "Nunito", sans-serif;
 }
 .rgc-search-box .fecha-none {
   opacity: 0;
