@@ -1,0 +1,24 @@
+.slick-custom-rgc
+    .slick-custom-arrow
+        background-color: $secondary-color
+        width: 50px
+        height: 50px
+        border: none
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        position: absolute
+        top: calc( 50% - 25px )
+        z-index: 2
+        transition: all .3s
+        &.slick-custom-next
+            right: 30px
+        &.slick-custom-prev
+            left: 30px
+        &:hover
+            background-color: $dark
+    .slick-dots
+        bottom: -60px

@@ -1,3 +1,40 @@
 .bg-gradient-primary
     background: rgb(251,187,1)
     background: linear-gradient(270deg, rgba(251,187,1,1) 0%, rgba(224,131,31,1) 100%)
+
+.text-color-primary
+    color: $primary-color
+
+.text-color-secondary
+    color: $secondary-color
+
+.padding-section
+    padding: 4em 0
+
+.rgc-box-title
+    &__divider
+        width: 50px
+        border: 2px solid $secondary-color
+        border-radius: 50px
+.rgc-rounded-card
+    border-radius: 20px
+
+.bg-secondary-gradient
+    background: rgb(224,131,31)
+    background: linear-gradient(90deg, rgba(224,131,31,1) 0%, rgba(251,187,1,1) 100%)
+
+.button-master
+    line-height: 1.2em !important
+    padding: 1em 2em !important
+    &.button-rounded
+        border-radius: 50px !important
+    &.principal-button
+        background: rgb(224,131,31)
+        background: linear-gradient(90deg, rgba(224,131,31,1) 0%, rgba(251,187,1,1) 100%)
+        transition: all .3s
+        &:hover
+            background: $dark
+.bg-image
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
