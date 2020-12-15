@@ -1,0 +1,88 @@
+.rgc-card-package
+    font-size: 10pt
+    margin: 2em
+    position: relative
+    &__image
+        width: 100%
+        height: 250px
+        object-fit: cover
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+    hr
+        border: 1px solid rgba(#ccc, .3)
+        margin: 1.5em 0
+    .button-master
+        font-size: 1.2em !important
+    .rgc-buttons
+        margin-bottom: -60px
+.rgc-content-package
+    &__days
+        font-size: 1.2em
+        &-day
+            color: $secondary-color
+            display: inline-block
+            margin: .5em
+        &-night
+            color: $primary-color
+            display: inline-block
+            margin: .5em
+    &__price
+        display: flex
+        flex-flow: row wrap
+        margin-bottom: 1em
+        &-reduced
+            margin-right: 2em
+            color: #BD0606
+            font-weight: bold
+            font-size: 1.5em
+            &__condition
+                color: #BD0606
+        &-normal
+            text-decoration-line: line-through
+            color: #757575
+            &__condition
+                color: #757575
+    &__rating
+        display: flex
+        flex-flow: row nowrap
+        align-items: center
+        &-number
+            background-color: $secondary-color
+            color: white
+            padding: 5px
+            border-radius: 3px
+            margin-right: 7px
+        &-stars
+            color: $secondary-color
+    &__info
+        &__link
+            display: block
+            font-family: $secondary-font
+            text-decoration: underline
+            color: $secondary-color
+            font-weight: 600
+            &:hover
+                color: darken($secondary-color, 7)
+.rgc-box-offer
+    width: 100px
+    height: 100px
+    background-color: $secondary-color
+    position: absolute
+    left: -30px
+    top: -20px
+    color: white
+    padding: 1em
+    &__text
+        font-weight: bold
+        color: white
+        font-size: 2em
+        &-sm
+            font-size: 1em
+    &::before
+        content: ''
+        width: 100%
+        height: 100%
+        position: absolute
+        border: 2px dashed white
+        border-radius: 50%
+        transform: scale(.9)

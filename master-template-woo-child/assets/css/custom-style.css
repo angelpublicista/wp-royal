@@ -3,6 +3,212 @@
   background: linear-gradient(270deg, #fbbb01 0%, #e0831f 100%);
 }
 
+.text-color-primary {
+  color: #010077;
+}
+
+.text-color-secondary {
+  color: #E0831F;
+}
+
+.padding-section {
+  padding: 4em 0;
+}
+
+.rgc-box-title__divider {
+  width: 50px;
+  border: 2px solid #E0831F;
+  border-radius: 50px;
+}
+
+.rgc-rounded-card {
+  border-radius: 20px;
+}
+
+.bg-secondary-gradient {
+  background: #e0831f;
+  background: linear-gradient(90deg, #e0831f 0%, #fbbb01 100%);
+}
+
+.button-master {
+  line-height: 1.2em !important;
+  padding: 1em 2em !important;
+}
+.button-master.button-rounded {
+  border-radius: 50px !important;
+}
+.button-master.principal-button {
+  background: #e0831f;
+  background: linear-gradient(90deg, #e0831f 0%, #fbbb01 100%);
+  transition: all 0.3s;
+}
+.button-master.principal-button:hover {
+  background: #2D2D2D;
+}
+
+.rgc-sub-heading-section {
+  color: white;
+}
+.rgc-sub-heading-section h2 {
+  color: white;
+}
+.rgc-sub-heading-section h3 {
+  color: white;
+}
+.rgc-sub-heading-section .rgc-intro__left {
+  font-size: 2em;
+  border-right: 2px solid white;
+}
+.rgc-sub-heading-section .rgc-intro__left span {
+  font-family: "Roboto", sans-serif !important;
+}
+.rgc-sub-heading-section .rgc-intro__left h2 {
+  line-height: 1em !important;
+}
+.rgc-sub-heading-section .rgc-intro__right h3 {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.rgc-card-package {
+  font-size: 10pt;
+  margin: 2em;
+  position: relative;
+}
+.rgc-card-package__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.rgc-card-package hr {
+  border: 1px solid rgba(204, 204, 204, 0.3);
+  margin: 1.5em 0;
+}
+.rgc-card-package .button-master {
+  font-size: 1.2em !important;
+}
+.rgc-card-package .rgc-buttons {
+  margin-bottom: -60px;
+}
+
+.rgc-content-package__days {
+  font-size: 1.2em;
+}
+.rgc-content-package__days-day {
+  color: #E0831F;
+  display: inline-block;
+  margin: 0.5em;
+}
+.rgc-content-package__days-night {
+  color: #010077;
+  display: inline-block;
+  margin: 0.5em;
+}
+.rgc-content-package__price {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1em;
+}
+.rgc-content-package__price-reduced {
+  margin-right: 2em;
+  color: #BD0606;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.rgc-content-package__price-reduced__condition {
+  color: #BD0606;
+}
+.rgc-content-package__price-normal {
+  text-decoration-line: line-through;
+  color: #757575;
+}
+.rgc-content-package__price-normal__condition {
+  color: #757575;
+}
+.rgc-content-package__rating {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.rgc-content-package__rating-number {
+  background-color: #E0831F;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin-right: 7px;
+}
+.rgc-content-package__rating-stars {
+  color: #E0831F;
+}
+.rgc-content-package__info__link {
+  display: block;
+  font-family: "Nunito", sans-serif;
+  text-decoration: underline;
+  color: #E0831F;
+  font-weight: 600;
+}
+.rgc-content-package__info__link:hover {
+  color: #c1711b;
+}
+
+.rgc-box-offer {
+  width: 100px;
+  height: 100px;
+  background-color: #E0831F;
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  color: white;
+  padding: 1em;
+}
+.rgc-box-offer__text {
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+}
+.rgc-box-offer__text-sm {
+  font-size: 1em;
+}
+.rgc-box-offer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 2px dashed white;
+  border-radius: 50%;
+  transform: scale(0.9);
+}
+
+.slick-custom-rgc .slick-custom-arrow {
+  background-color: #E0831F;
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: calc( 50% - 25px );
+  z-index: 2;
+  transition: all 0.3s;
+}
+.slick-custom-rgc .slick-custom-arrow.slick-custom-next {
+  right: 30px;
+}
+.slick-custom-rgc .slick-custom-arrow.slick-custom-prev {
+  left: 30px;
+}
+.slick-custom-rgc .slick-custom-arrow:hover {
+  background-color: #2D2D2D;
+}
+.slick-custom-rgc .slick-dots {
+  bottom: -60px;
+}
+
 .form-master {
   background-color: transparent !important;
   color: white !important;
