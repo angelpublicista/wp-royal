@@ -19,7 +19,7 @@ if(!function_exists('rgc_search_advanced_func')){
                 </div>
                 <div class="form-group col text-left">
                     <label for="fechas" class="label-search">Fechas</label>
-                    <input type="date" class="form-control">
+                    <input type="date" class="form-control" name="fecha">
                 </div>
                 <div class="form-group col text-left">
                     <label for="fechas" class="fecha-none ">fecha</label>
