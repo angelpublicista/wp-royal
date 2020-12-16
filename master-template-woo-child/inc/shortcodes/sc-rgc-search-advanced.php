@@ -4,11 +4,11 @@ if(!function_exists('rgc_search_advanced_func')){
     function rgc_search_advanced_func(){
         ob_start();
         ?>
-        <form action="">
+        <form action="<?php echo home_url( '/' ); ?>" role="search" method="get" >
             <div class="form-row rgc-search-box shadow align-items-end">
                 <div class="form-group col text-left">
                     <label for="palabra" class="label-search">Palabra clave</label>
-                    <input type="text" class="form-control" placeholder="Ingresa un término">
+                    <input type="text" class="form-control" placeholder="Ingresa un término" value="<?php echo get_search_query() ?>" name="s">
                 </div>
                 <div class="form-group col text-left">
                     <label for="destino" class="label-search">Destino</label>
@@ -26,7 +26,8 @@ if(!function_exists('rgc_search_advanced_func')){
                     <input type="date" class="form-control">
                 </div>
                 <div class="form-group col">
-                    <button type="submit" class="w-100 button-master rounded secondary-button mt-4 rgc-button-search"><i class="fas fa-search"></i> BUSCAR</button>
+                    <input type="hidden" name="post_type" value="tours" />
+                    <button type="submit" class="w-100 button-master rounded secondary-button mt-4 rgc-button-search search-submit"><i class="fas fa-search"></i> BUSCAR</button>
                 </div>
             </div>
         </form>
