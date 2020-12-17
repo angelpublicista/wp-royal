@@ -37,7 +37,7 @@ if ( ! function_exists('wp_tours') ) {
             'label'                 => __( 'Paquete', 'text_domain' ),
             'description'           => __( 'Todos los Paquetes', 'text_domain' ),
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'thumbnail', 'comments' ),
+            'supports'              => array( 'title', 'editor', 'thumbnail' ),
             'taxonomies'            => array( 'category', 'post_tag' ),
             'hierarchical'          => false,
             'public'                => true,
