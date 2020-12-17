@@ -17,8 +17,16 @@ get_header();
             <div class="row rgc-content-package shadow">
                 <div class="col-12 col-md-7 p-0">
                     <div class="rgc-content-package__gallery slick-theme slick-custom-rgc">
-                        <a href="https://picsum.photos/1920/1080" data-lightbox="roadtrip"><img src="https://picsum.photos/1920/1080" alt="" class="rgc-content-package__gallery-item"></a>
-                        <a href="https://picsum.photos/1920/1080" data-lightbox="roadtrip"><img src="https://picsum.photos/1920/1080" alt="" class="rgc-content-package__gallery-item"></a>
+                        <a href="<?php the_post_thumbnail_url("full"); ?>" data-lightbox="roadtrip"><?php the_post_thumbnail( "full", array("class" => "rgc-content-package__gallery-item") ); ?></a>
+                        <?php if(get_field('galeria_de_imagenes')): ?>
+                            <?php 
+                                $gallery_string = get_field('galeria_de_imagenes');
+                                $gallery = explode(',', $gallery_string);
+                                foreach($gallery as $item_gallery):
+                            ?>
+                                <a href="<?php echo wp_get_attachment_image_url($item_gallery, "full"); ?>" data-lightbox="roadtrip"><?php echo wp_get_attachment_image( $item_gallery, "full", false, array("class" => "rgc-content-package__gallery-item") ); ?></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-5 p-5">
@@ -57,8 +65,8 @@ get_header();
                        $precio_no_afiliados = $no_afiliados['precio_no_afiliados'];
                        $condicion_no_afiliados = $no_afiliados['condiciones_no_afiliado'];
                     ?> 
-                            <span class="rgc-content-package__price-reduced"> <?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
-                        <span class="rgc-content-package__price-normal"> <?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo   $condicion_no_afiliados; ?></span></span>
+                            <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
+                        <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo   $condicion_no_afiliados; ?></span></span>
                     </div>
 
                     <?php
@@ -133,40 +141,19 @@ get_header();
     </section>
 
     <!-- Términos y condiciones -->
+    <?php if(get_field('terminos_y_condiciones')): ?>
     <section class="padding-section rgc-package-conditions">
         <div class="container">
             <div class="rgc-package-conditions__box rgc-rounded-card p-5">
                 <h3 class="rgc-package-conditions__box-title text-center">Términos y condiciones</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tempore ea ipsa ipsum corrupti. Vitae obcaecati consequuntur labore. A eaque quae natus sequi veniam alias. Omnis esse delectus quia perspiciatis.</p>
+                <p><?php the_field('terminos_y_condiciones'); ?></p>
             </div>
         </div>
     </section>
+    <?php endif; ?>
 
     <!-- Sección asesoría -->
-    <section class="padding-section rgc-assesor bg-image" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/img/bg-asesor.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="rgc-assesor__box">
-                        <i class="far fa-paper-plane"></i>
-                        <a href="#">Lorem, ipsum dolor.</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="rgc-assesor__box">
-                        <i class="fas fa-headset"></i>
-                        <a href="#">Lorem, ipsum dolor.</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="rgc-assesor__box">
-                        <i class="fas fa-headset"></i>
-                        <a href="#">Lorem, ipsum dolor.</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php echo do_shortcode( '[rgc_assesor]' ); ?>
 
     <!-- Paquetes recomendados -->
     <section class="padding-section">

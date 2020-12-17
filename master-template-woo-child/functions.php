@@ -20,6 +20,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_styles_child_theme' );
 
 require "inc/shortcodes/sc-rgc-search-advanced.php";
 require "inc/shortcodes/sc-rgc-carousel-tours.php";
+require "inc/shortcodes/sc-rgc-assesor.php";
 require "inc/custom-post-types/cpt-tours.php";
 
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
