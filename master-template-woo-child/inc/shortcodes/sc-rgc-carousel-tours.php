@@ -49,8 +49,10 @@ if(!function_exists('rgc_carousel_tours_func')){
                             $precio_no_afiliados = $no_afiliados['precio_no_afiliados'];
                             $condicion_no_afiliados = $no_afiliados['condiciones_no_afiliado'];
                         ?> 
-                            <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
-                            <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo   $condicion_no_afiliados; ?></span></span>
+                            
+                            <span class="rgc-content-package__price-reduced d-block"><span class="rgc-content-package__text-afiliados d-block">Tarifa Afiliado</span>$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition d-block"> <?php echo $condicion_afiliados; ?></span></span>
+                            
+                            <span class="rgc-content-package__price-normal d-block"><span class="rgc-content-package__text-noafiliados d-block">Tarifa No afiliado</span> $<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition d-block"> <?php echo   $condicion_no_afiliados; ?></span></span>
                         </div>
 
                         <div class="rgc-content-package__rating">
