@@ -91,6 +91,14 @@ textarea.form-control {
   border-bottom: 1px solid #757575;
 }
 
+.privacy-policy .rgc-search-box {
+  display: none;
+}
+
+.elementor-page-53 .rgc-search-box {
+  display: none;
+}
+
 .rgc-sub-heading-section {
   color: white;
 }
@@ -362,6 +370,36 @@ textarea.form-control {
 .top-footer .footer-pbx p {
   font-family: "Nunito", sans-serif !important;
   font-size: 2em;
+}
+.top-footer .footer-legal p {
+  font-size: 1em;
+  margin-top: 2em;
+}
+.top-footer .footer-legal a {
+  color: white;
+  transition: all 0.4s;
+}
+.top-footer .footer-legal a:hover {
+  color: #E0831F;
+}
+
+.footer-contact {
+  font-size: 12pt !important;
+}
+.footer-contact .pbx-info {
+  font-size: 0.8em;
+}
+.footer-contact .nav-item a {
+  font-size: 0.6em !important;
+  color: white;
+}
+.footer-contact .nav-item i {
+  margin-right: 10px;
+}
+.footer-contact .rnt-link {
+  color: #E0831F !important;
+  font-size: 1.5em !important;
+  text-decoration: underline;
 }
 
 .form-master {
