@@ -402,6 +402,18 @@ textarea.form-control {
   text-decoration: underline;
 }
 
+.embed-responsive .embed-responsive-item {
+  width: 100%;
+  min-height: 520px;
+}
+
+.elementor-page-55 .rgc-search-box {
+  display: none;
+}
+.elementor-page-55 .sub-heading-section .breadcrumbs {
+  display: none;
+}
+
 .form-master {
   background-color: transparent !important;
   color: white !important;

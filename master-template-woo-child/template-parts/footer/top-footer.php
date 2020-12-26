@@ -63,7 +63,7 @@ global $geniorama
 			</div>
 		<?php endif; ?>
 		<div class="footer-legal">
-			<p><a href="http://royal-golden-group.local/terminos-y-condiciones/" target="_blank" class="legal-link">Terminos y condiciones</a> / <a href="http://royal-golden-group.local/politicas-de-privacidad/" target="_blank">Politicas de privacidad</a></p>
+			<p><a href="http://royal-golden-group.local/terminos-y-condiciones/" target="_blank" class="legal-link mb-2">Terminos y condiciones</a> / <a href="http://royal-golden-group.local/politicas-de-privacidad/" target="_blank">Politicas de privacidad</a></p>
 		</div>
 	</div>
 </div>
