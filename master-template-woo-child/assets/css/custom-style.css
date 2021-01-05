@@ -91,6 +91,14 @@ textarea.form-control {
   border-bottom: 1px solid #757575;
 }
 
+.privacy-policy .rgc-search-box {
+  display: none;
+}
+
+.elementor-page-53 .rgc-search-box {
+  display: none;
+}
+
 .rgc-sub-heading-section {
   color: white;
 }
@@ -171,10 +179,13 @@ textarea.form-control {
   margin-right: 2em;
   color: #BD0606;
   font-weight: bold;
-  font-size: 1.5em;
+}
+.rgc-content-package__price-reduced br {
+  display: none;
 }
 .rgc-content-package__price-reduced__condition {
   color: #BD0606;
+  font-size: 0.7em;
 }
 .rgc-content-package__price-normal {
   text-decoration-line: line-through;
@@ -213,6 +224,16 @@ textarea.form-control {
   height: 600px;
   object-fit: cover;
   border-radius: 20px;
+}
+.rgc-content-package__text-afiliados {
+  color: #CD4343;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.rgc-content-package__text-noafiliados {
+  color: #757575;
+  font-family: 1em;
+  font-weight: bold;
 }
 
 .rgc-box-offer {
@@ -344,6 +365,59 @@ textarea.form-control {
 .rgc-assesor div:nth-child(even) {
   border-left: 2px solid #010077;
   border-right: 2px solid #010077;
+}
+
+.top-footer .footer-pbx p {
+  font-family: "Nunito", sans-serif !important;
+  font-size: 2em;
+}
+.top-footer .footer-legal p {
+  font-size: 1em;
+  margin-top: 2em;
+}
+.top-footer .footer-legal a {
+  color: white;
+  transition: all 0.4s;
+}
+.top-footer .footer-legal a:hover {
+  color: #E0831F;
+}
+
+.footer-contact {
+  font-size: 12pt !important;
+}
+.footer-contact .pbx-info {
+  font-size: 0.8em;
+}
+.footer-contact .nav-item a {
+  font-size: 0.6em !important;
+  color: white;
+}
+.footer-contact .nav-item i {
+  margin-right: 10px;
+}
+.footer-contact .rnt-link {
+  color: #E0831F !important;
+  font-size: 1.5em !important;
+  text-decoration: underline;
+}
+
+.embed-responsive .embed-responsive-item {
+  width: 100%;
+  min-height: 520px;
+}
+
+.elementor-page-55 .rgc-search-box {
+  display: none;
+}
+.elementor-page-55 .sub-heading-section {
+  padding: 4em !important;
+}
+.elementor-page-55 .sub-heading-section .breadcrumbs {
+  display: none;
+}
+.elementor-page-55 .sub-heading-section .container h1 {
+  font-size: 90px;
 }
 
 .form-master {
