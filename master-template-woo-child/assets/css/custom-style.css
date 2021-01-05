@@ -410,8 +410,14 @@ textarea.form-control {
 .elementor-page-55 .rgc-search-box {
   display: none;
 }
+.elementor-page-55 .sub-heading-section {
+  padding: 4em !important;
+}
 .elementor-page-55 .sub-heading-section .breadcrumbs {
   display: none;
+}
+.elementor-page-55 .sub-heading-section .container h1 {
+  font-size: 90px;
 }
 
 .form-master {
