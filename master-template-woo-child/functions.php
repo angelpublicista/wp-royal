@@ -18,10 +18,15 @@ function enqueue_styles_child_theme() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_styles_child_theme' );
 
+
+require "inc/helpers.php";
 require "inc/shortcodes/sc-rgc-search-advanced.php";
 require "inc/shortcodes/sc-rgc-carousel-tours.php";
 require "inc/shortcodes/sc-rgc-assesor.php";
+require "inc/shortcodes/sc-rgc-restrict-content.php";
 require "inc/custom-post-types/cpt-tours.php";
+require "inc/custom-taxonomies/tax-rgc-destinos.php";
+
 
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 

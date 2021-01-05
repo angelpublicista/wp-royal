@@ -21,6 +21,8 @@ global $geniorama;
                     </div>
                 </div>
 
+                <?php echo do_shortcode('[searchandfilter fields="search,destinos" post_types="tours"]'); ?>
+
                 <div class="rgc-search-bar">
                     <?php echo do_shortcode('[rgc_search_advanced]'); ?>
                 </div>

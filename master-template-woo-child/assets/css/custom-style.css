@@ -420,6 +420,17 @@ textarea.form-control {
   font-size: 90px;
 }
 
+.rgc-user-block {
+  min-height: 80vh;
+}
+.rgc-user-block i {
+  font-size: 4em;
+  color: #010077;
+}
+.rgc-user-block p {
+  font-size: 1.5em;
+}
+
 .form-master {
   background-color: transparent !important;
   color: white !important;
