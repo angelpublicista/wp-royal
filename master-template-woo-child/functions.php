@@ -37,3 +37,20 @@ function add_my_post_types_to_query( $query ) {
 	return $query;
 }
 
+
+function dcms_menu_dinamico( $args ) {
+
+	if ( $args['theme_location'] == 'menu-1'){
+
+		if ( is_user_logged_in() ) {
+			$args['menu'] = 'menu-registrados';
+		} else {
+			$args['menu'] = 'menu-visitantes';
+		}
+
+	}
+
+	return $args;
+}
+
+add_filter( 'wp_nav_menu_args', 'dcms_menu_dinamico' );
