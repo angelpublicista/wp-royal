@@ -18,15 +18,35 @@ if(!function_exists('rgc_carousel_tours_func')){
             ?>
             <div class="slick-paquetes-recomendados slick-theme my-5 slick-custom-rgc">
                 <?php while($tours_query->have_posts()): $tours_query->the_post(); ?>
+
+                <?php $destinos = get_the_terms( $tours_query->ID, 'destinos' ); ?>
                 <div class="rgc-card-package shadow rgc-rounded-card">
                     <div class="rgc-box-offer rounded-circle text-center d-flex flex-column align-items-center justify-content-center">
-                        <span class="rgc-box-offer__text rgc-box-offer__text-lg">15%</span>
-                        <span class="rgc-box-offer__text rgc-box-offer__text-sm">OFF</span>
+                        <!-- <span class="rgc-box-offer__text rgc-box-offer__text-lg">15%</span> -->
+                        <span class="rgc-box-offer__text rgc-box-offer__text-sm">Tarifa reducida</span>
                     </div>
                     <?php the_post_thumbnail( "medium", array("class" => "rgc-card-package__image") ); ?>
                     <div class="rgc-card-package__info p-4">
                         <a href="<?php the_permalink(); ?>"><h3 class="rgc-content-package__title text-center"><?php the_title(); ?></h3></a>
-                        <p class="rgc-content-package__city text-center">Cartagena, Colombia</p>
+                        <?php if($destinos): $counter = 0; ?>
+                        <p class="rgc-content-package__city text-center">
+                        
+                            <?php foreach ($destinos as $destino) {
+                                $counter = $counter + 1;
+                                if(count($destinos) > 1){
+                                    if($counter < count($destinos)){
+                                        echo $destino->name . ", ";
+                                    } else {
+                                        echo $destino->name;
+                                    }
+                                    
+                                } else {
+                                    echo $destino->name;
+                                }
+                            }
+                            ?>
+                        </p>
+                        <?php endif; ?>
                         <div class="rgc-content-package__days mb-3 text-center">
                             <?php if(get_field('noches')): ?>
                                 <span class="rgc-content-package__days-night"><i class="far fa-moon"></i> <?php the_field('noches'); ?></span>
@@ -68,21 +88,7 @@ if(!function_exists('rgc_carousel_tours_func')){
                         <hr>
                         <div class="text-center rgc-buttons">
                             <a href="<?php the_permalink(); ?>" class="rgc-content-package__info__link">Ver más</a>
-                            <?php
-                                $tipo_reserva = get_field('boton_reserva');
-
-                                if($tipo_reserva == "Whatsapp"){
-                                    $link_reserva = api_whatsapp();
-                                } else {
-                                    if(get_field('link_de_reserva')){
-                                        $link_reserva = get_field('link_de_reserva');
-                                    } else {
-                                        $link_reserva = "#";
-                                    }
-                                }
-                            ?>
-                            
-                            <a href="<?php echo $link_reserva; ?>" class="button-master principal-button button-rounded my-3" target="_blank">RESERVAR AHORA</a>
+                            <?php echo do_shortcode( '[rgc_action_button]' ); ?>
                         </div>
                     </div>
                 </div>

@@ -26,8 +26,10 @@ add_action('login_head', 'my_custom_login_page_css');
 
 
 require "inc/helpers.php";
+require "inc/shortcodes/sc-action-button.php";
 require "inc/shortcodes/sc-rgc-search-advanced.php";
 require "inc/shortcodes/sc-rgc-carousel-tours.php";
+require "inc/shortcodes/sc-rgc-releated-post.php";
 require "inc/shortcodes/sc-rgc-assesor.php";
 require "inc/shortcodes/sc-rgc-restrict-content.php";
 require "inc/custom-post-types/cpt-tours.php";

@@ -29,13 +29,18 @@ $post_query = new WP_Query($args);
                         <figure>
                             <?php the_post_thumbnail( "medium", array("class" => "rgc-card-archive__img") ); ?>
 
-                            <?php if($destinos): ?>
+                            <?php if($destinos): $counter = 0; ?>
                                 <figcaption class="rgc-card-archive__caption">
                                     <span class="rgc-card-archive__caption__city <?php if(count($destinos) > 1): ?>multiple-cities<?php endif; ?>">
                                         <?php
                                             foreach ($destinos as $destino) {
+                                                $counter = $counter + 1;
                                                 if(count($destinos) > 1){
-                                                    echo $destino->name . ", ";
+                                                    if($counter < count($destinos)){
+                                                        echo $destino->name . ", ";
+                                                    } else {
+                                                        echo $destino->name;
+                                                    }
                                                 } else {
                                                     echo $destino->name;
                                                 }

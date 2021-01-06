@@ -154,6 +154,9 @@ textarea.form-control {
 .rgc-card-package .rgc-buttons {
   margin-bottom: -60px;
 }
+.rgc-card-package .rgc-buttons .wpcf7-form p {
+  margin: 0;
+}
 
 .rgc-content-package {
   border-radius: 20px;
@@ -195,6 +198,7 @@ textarea.form-control {
 .rgc-content-package__price-reduced__condition {
   color: #BD0606;
   font-size: 0.7em;
+  display: block;
 }
 .rgc-content-package__price-normal {
   text-decoration-line: line-through;
@@ -204,7 +208,7 @@ textarea.form-control {
   color: #757575;
 }
 .rgc-content-package__rating {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   align-items: center;
 }

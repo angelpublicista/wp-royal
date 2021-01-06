@@ -44,6 +44,29 @@ get_header();
                     </div>
 
                     <h3 class="rgc-content-package__title text-center"><?php the_title(); ?></h3>
+
+                    <?php 
+                        $destinos = get_the_terms( $post->ID, 'destinos' );
+                    ?>
+
+                    <?php if($destinos): $counter = 0; ?>
+                    <p class="rgc-content-package__city text-center">
+                            <?php foreach ($destinos as $destino) {
+                                $counter = $counter + 1;
+                                if(count($destinos) > 1){
+                                    if($counter < count($destinos)){
+                                        echo $destino->name . ", ";
+                                    } else {
+                                        echo $destino->name;
+                                    }
+                                    
+                                } else {
+                                    echo $destino->name;
+                                }
+                            }
+                            ?>
+                    </p>
+                    <?php endif; ?>
                     <div class="rgc-content-package__days mb-3 text-center">
                         <?php if(get_field('noches')): ?>
                             <span class="rgc-content-package__days-night"><i class="far fa-moon"></i> <?php the_field('noches'); ?></span>
@@ -67,26 +90,14 @@ get_header();
                        $precio_no_afiliados = $no_afiliados['precio_no_afiliados'];
                        $condicion_no_afiliados = $no_afiliados['condiciones_no_afiliado'];
                     ?> 
-                            <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
-                        <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo   $condicion_no_afiliados; ?></span></span>
+                        <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
+                        <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo $condicion_no_afiliados; ?></span></span>
                     </div>
-
-                    <?php
-                        $tipo_reserva = get_field('boton_reserva');
-
-                        if($tipo_reserva == "Whatsapp"){
-                            $link_reserva = api_whatsapp();
-                        } else {
-                            if(get_field('link_de_reserva')){
-                                $link_reserva = get_field('link_de_reserva');
-                            } else {
-                                $link_reserva = "#";
-                            }
-                        }
-                    ?>
+                    
                     <div class="text-center">
-                        <a href="<?php echo $link_reserva; ?>" class="button-master principal-button button-rounded my-3" target="_blank">RESERVAR AHORA</a>
+                     <?php echo do_shortcode( "[rgc_action_button]" )?>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -102,7 +113,7 @@ get_header();
                 <hr class="rgc-box-title__divider">
             </div>
             
-            <div class="row rgc-package-features text-center">
+            <div class="row rgc-package-features text-left">
 
                 <?php
                 $features = get_field('incluye');
@@ -157,6 +168,11 @@ get_header();
     <!-- Sección asesoría -->
     <?php echo do_shortcode( '[rgc_assesor]' ); ?>
 
+    <?php 
+        $paquetes_recomendados = get_field('recomendados');  
+    ?>
+
+    <?php if($paquetes_recomendados): $paquetes_recomendados_implode = implode(",", $paquetes_recomendados); ?>
     <!-- Paquetes recomendados -->
     <section class="padding-section">
         <div class="container">
@@ -166,8 +182,11 @@ get_header();
             </div>
         </div>
 
-        <?php echo do_shortcode( '[rgc_carousel_tours]' ); ?>
+        <div class="p-4">
+            <?php echo do_shortcode( '[rgc_releated_post recomendados='.$paquetes_recomendados_implode.']' ); ?> 
+        </div>  
     </section>
+    <?php endif; ?>
 </main>
 
 <?php else: ?>
