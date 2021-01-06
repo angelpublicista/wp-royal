@@ -174,7 +174,7 @@ get_header();
     <section class="padding-section text-center rgc-user-block d-flex align-items-center justify-content-center flex-column">
         <i class="fas fa-user-lock mb-4"></i>
         <h2>Contenido restringido</h2>
-        <p>Si ya estás registrad@, debes <a href="#">Iniciar sesión</a> para ver este contenido</p>
+        <p>Si ya estás registrad@, debes <a href="<?php echo wp_login_url(); ?>">Iniciar sesión</a> para ver este contenido</p>
     </section>
 <?php endif; ?>
 <?php

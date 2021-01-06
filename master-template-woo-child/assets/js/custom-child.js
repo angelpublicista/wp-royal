@@ -49,5 +49,10 @@ jQuery(function ($) {
 
     $('.menu-item-has-children').mouseleave(function(){
       $(this).find('.sub-menu').slideUp();
-  });
+    });
+
+    // Form search
+    $('.rgc-custom-filter-form input[type="submit"]').replaceWith("<button type='submit' class='btn-filter-submit'><i class='fas fa-search mr-1'></i> BUSCAR</button>");
+    // $('.rgc-custom-filter-form h4').css('text-align','left');
+    // $('.rgc-custom-filter-form h4').css('margin','0px 0px 5px 0px');
 });

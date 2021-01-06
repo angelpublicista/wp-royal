@@ -21,10 +21,8 @@ global $geniorama;
                     </div>
                 </div>
 
-                <?php echo do_shortcode('[searchandfilter fields="search,destinos" post_types="tours"]'); ?>
-
-                <div class="rgc-search-bar">
-                    <?php echo do_shortcode('[rgc_search_advanced]'); ?>
+                <div class="rgc-search-bar shadow">
+                     <?php echo do_shortcode('[searchandfilter fields="search,destinos" headings="Palabra clave, Destino" search_placeholder="Ingresa un término" post_types="tours" submit_label="BUSCAR" class="rgc-custom-filter-form"]'); ?>
                 </div>
             </div>
         </div>
