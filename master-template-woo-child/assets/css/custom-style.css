@@ -447,7 +447,7 @@ textarea.form-control {
   padding: 2em 3em;
   background-color: white;
   margin-bottom: -100px;
-  display: inline-block !important;
+  display: none;
   transform: translateY(50px);
 }
 
@@ -488,6 +488,10 @@ textarea.form-control {
 }
 .rgc-custom-filter-form .btn-filter-submit:hover {
   background-color: #010049;
+}
+
+.page-template-paquetes-page .rgc-search-bar, .single-tours .rgc-search-bar, .search .rgc-search-bar, .blog.logged-in .rgc-search-bar {
+  display: inline-block !important;
 }
 
 .rgc-card-archive {

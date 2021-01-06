@@ -5,7 +5,7 @@
     padding: 2em 3em
     background-color: white
     margin-bottom: -100px
-    display: inline-block !important
+    display: none
     transform: translateY(50px)
 .rgc-custom-filter-form
     ul
@@ -39,3 +39,7 @@
         padding: 0 1em
         &:hover
             background-color: darken($primary-color, 9)
+
+.page-template-paquetes-page, .single-tours, .search, .blog.logged-in
+    .rgc-search-bar
+        display: inline-block !important
