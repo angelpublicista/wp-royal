@@ -431,10 +431,6 @@ textarea.form-control {
   font-size: 1.5em;
 }
 
-.wp-core-ui #login .button-primary, .wp-core-ui #login .two-factor-email-resend .butto {
-  font-size: 2em !important;
-}
-
 .form-master {
   background-color: transparent !important;
   color: white !important;

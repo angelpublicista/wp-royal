@@ -18,6 +18,12 @@ function enqueue_styles_child_theme() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_styles_child_theme' );
 
+function my_custom_login_page_css() {
+	wp_enqueue_style( 'login_css', get_stylesheet_directory_uri() . '/assets/css/login.css' );
+	wp_enqueue_script( 'login-js', get_stylesheet_directory_uri() . '/assets/js/login.js', array('jquery'), '1.8.1', true);
+}
+add_action('login_head', 'my_custom_login_page_css');
+
 
 require "inc/helpers.php";
 require "inc/shortcodes/sc-rgc-search-advanced.php";
@@ -36,4 +42,5 @@ function add_my_post_types_to_query( $query ) {
 
 	return $query;
 }
+
 

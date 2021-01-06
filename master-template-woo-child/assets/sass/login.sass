@@ -1,0 +1,65 @@
+@import variables
+@import general-styles
+    
+.login
+    background-image: url('http://royal-golden-group.local/wp-content/themes/master-template-woo-child/assets/img/bg-login.png')
+    background-size: cover
+    background-position: top center
+    h1
+        .rgc-login-title
+            color: $primary-color
+            font-family: $primary-font
+    #login
+        width: 400px
+    #nav
+        text-align: center
+        a
+            color: $secondary-color
+            font-size: 1.5em
+            font-family: $secondary-font
+            &:hover
+                color: darken($secondary-color, 8)
+                text-decoration: underline
+    #backtoblog
+        text-align: center
+    .button
+        background: rgb(251,187,1)
+        background: linear-gradient(270deg, rgba(251,187,1,1) 0%, rgba(224,131,31,1) 100%)
+        border: none
+        border-radius: 50px
+        font-family: $primary-font
+        text-transform: uppercase
+        display: block
+        width: 100%
+        padding: .5em !important
+        margin-top: 1em
+        color: $primary-color
+        font-weight: bold
+        letter-spacing: 1px
+        &:hover
+            background: $dark
+
+#loginform, #lostpasswordform
+    border: none !important
+    padding: 2em 3em !important
+    border-radius: 20px
+    label
+        font-family: $secondary-font
+    input
+        padding: 0 1em
+        font-size: 1.2em
+    
+#lostpasswordform
+    .message-lost
+        margin-bottom: 2em
+.login-action-lostpassword
+    .message
+        display: none
+    #nav
+        a:last-child
+            display: none
+
+.login-action-login
+    #nav
+        a:first-child
+            display: none
