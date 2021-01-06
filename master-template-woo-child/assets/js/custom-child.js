@@ -49,5 +49,7 @@ jQuery(function ($) {
 
     $('.menu-item-has-children').mouseleave(function(){
       $(this).find('.sub-menu').slideUp();
-  });
+    });
+
+    $('#wp-submit').removeClass('.button')
 });
