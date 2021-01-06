@@ -1,0 +1,185 @@
+.bg-gradient-primary {
+  background: #fbbb01;
+  background: linear-gradient(270deg, #fbbb01 0%, #e0831f 100%);
+}
+
+.text-color-primary {
+  color: #010077;
+}
+
+.text-color-secondary {
+  color: #E0831F;
+}
+
+.padding-section {
+  padding: 4em 0;
+}
+
+.rgc-box-title__divider {
+  width: 50px;
+  border: 2px solid #E0831F;
+  border-radius: 50px;
+}
+
+.rgc-rounded-card {
+  border-radius: 20px;
+}
+
+.bg-secondary-gradient {
+  background: #e0831f;
+  background: linear-gradient(90deg, #e0831f 0%, #fbbb01 100%);
+}
+
+.button-master {
+  line-height: 1.2em !important;
+  padding: 1em 2em !important;
+}
+.button-master.button-rounded {
+  border-radius: 50px !important;
+}
+.button-master.principal-button {
+  background: #e0831f;
+  background: linear-gradient(90deg, #e0831f 0%, #fbbb01 100%);
+  transition: all 0.3s;
+}
+.button-master.principal-button:hover {
+  background: #2D2D2D;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-control {
+  padding: 0 0.5em !important;
+  font-family: "Nunito", sans-serif !important;
+  height: 50px !important;
+}
+
+textarea.form-control {
+  height: 150px !important;
+  padding-top: 1em !important;
+}
+
+.custom-select option {
+  font-family: "Nunito", sans-serif;
+}
+
+.menu-item-has-children {
+  position: relative;
+  display: block;
+}
+.menu-item-has-children .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  list-style: none;
+  padding: 0;
+  min-width: 150px;
+  background: #2D2D2D;
+  border-radius: 5px;
+}
+.menu-item-has-children i {
+  margin-left: 5px;
+  transform: translateY(-2px);
+}
+.menu-item-has-children .menu-item {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #757575;
+}
+
+.privacy-policy .rgc-search-box {
+  display: none;
+}
+
+.elementor-page-53 .rgc-search-box {
+  display: none;
+}
+
+.form-master {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.page-id-55 .rgc-search-bar {
+  display: none !important;
+}
+
+.login {
+  background-image: url("http://royal-golden-group.local/wp-content/themes/master-template-woo-child/assets/img/bg-login.png");
+  background-size: cover;
+  background-position: top center;
+}
+.login h1 .rgc-login-title {
+  color: #010077;
+  font-family: "Roboto", sans-serif;
+}
+.login #login {
+  width: 400px;
+}
+.login #nav {
+  text-align: center;
+}
+.login #nav a {
+  color: #E0831F;
+  font-size: 1.5em;
+  font-family: "Nunito", sans-serif;
+}
+.login #nav a:hover {
+  color: #bc6e1a;
+  text-decoration: underline;
+}
+.login #backtoblog {
+  text-align: center;
+}
+.login .button {
+  background: #fbbb01;
+  background: linear-gradient(270deg, #fbbb01 0%, #e0831f 100%);
+  border: none;
+  border-radius: 50px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  padding: 0.5em !important;
+  margin-top: 1em;
+  color: #010077;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.login .button:hover {
+  background: #2D2D2D;
+}
+
+#loginform, #lostpasswordform {
+  border: none !important;
+  padding: 2em 3em !important;
+  border-radius: 20px;
+}
+#loginform label, #lostpasswordform label {
+  font-family: "Nunito", sans-serif;
+}
+#loginform input, #lostpasswordform input {
+  padding: 0 1em;
+  font-size: 1.2em;
+}
+
+#lostpasswordform .message-lost {
+  margin-bottom: 2em;
+}
+
+.login-action-lostpassword .message {
+  display: none;
+}
+.login-action-lostpassword #nav a:last-child {
+  display: none;
+}
+
+.login-action-login #nav a:first-child {
+  display: none;
+}
+
+/*# sourceMappingURL=login.css.map */
