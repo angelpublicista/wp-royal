@@ -9,20 +9,20 @@ if(!function_exists('rgc_assesor_func')){
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <div class="rgc-assesor__box">
-                            <i class="far fa-paper-plane"></i>
-                            <a href="#">Lorem, ipsum dolor.</a>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="#">3148427341</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="rgc-assesor__box">
-                            <i class="fas fa-headset"></i>
-                            <a href="#">Lorem, ipsum dolor.</a>
+                            <i class="fas fa-envelope"></i>
+                            <a href="#">servicioalcliente@royalgoldenclub.com</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="rgc-assesor__box">
-                            <i class="fas fa-headset"></i>
-                            <a href="#">Lorem, ipsum dolor.</a>
+                            <i class="fas fa-map-marked-alt"></i>
+                            <a href="#">Av. el dorado # 68C-61 Oficina 628.</a>
                         </div>
                     </div>
                 </div>
