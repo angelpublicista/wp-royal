@@ -34,6 +34,7 @@ require "inc/shortcodes/sc-rgc-assesor.php";
 require "inc/shortcodes/sc-rgc-restrict-content.php";
 require "inc/custom-post-types/cpt-tours.php";
 require "inc/custom-taxonomies/tax-rgc-destinos.php";
+require "inc/custom-dashboard.php";
 
 
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );

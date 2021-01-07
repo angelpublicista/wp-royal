@@ -367,7 +367,7 @@ textarea.form-control {
   margin-bottom: 10px;
 }
 .rgc-assesor__box a {
-  font-size: 1.5em;
+  font-size: 1em !important;
   color: #010077;
   transition: all 0.3s;
   display: inline-block;
@@ -536,6 +536,23 @@ textarea.form-control {
 .rgc-search-not-found {
   max-width: 200px !important;
   margin-bottom: 2em;
+}
+
+.item-profile-user {
+  border-radius: 50px;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-logout .nav-link {
+  opacity: 0.4s !important;
+  font-size: 0.8em;
+}
+
+.sticky-header .btn-logout, .sticky-header .item-profile-user {
+  display: none;
 }
 
 /*# sourceMappingURL=custom-style.css.map */

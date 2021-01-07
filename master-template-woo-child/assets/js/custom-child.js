@@ -55,4 +55,6 @@ jQuery(function ($) {
     $('.rgc-custom-filter-form input[type="submit"]').replaceWith("<button type='submit' class='btn-filter-submit'><i class='fas fa-search mr-1'></i> BUSCAR</button>");
     // $('.rgc-custom-filter-form h4').css('text-align','left');
     // $('.rgc-custom-filter-form h4').css('margin','0px 0px 5px 0px');
+
+    $('.item-profile-user a').prepend('<i class="fas fa-user mr-2"></i>');
 });
