@@ -13,3 +13,30 @@
 .sticky-header
     .btn-logout, .item-profile-user 
         display: none
+
+.page-template-dashboard-page
+    .top-footer
+        display: none
+.rgc-dashboard-main
+    height: 93vh
+.rgc-dashboard-sidebar
+    height: 93vh
+    background: darken($primary-color, 15)
+    .nav-item
+        border-bottom: 1px solid rgba(#fff, .1)
+    .nav-link
+        padding: 1.5em 2em
+        color: white
+        font-size: 1.2em
+        opacity: .7
+        &:hover
+            opacity: 1
+.rgc-dashboard-content
+    height: 93vh
+    hr
+        width: 50px
+        border: 1px solid #d7d7d7
+
+@media screen and (max-width: 480px)
+    .rgc-dashboard-main, .rgc-dashboard-sidebar, .rgc-dashboard-content
+        height: auto

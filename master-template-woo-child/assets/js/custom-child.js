@@ -36,9 +36,6 @@ jQuery(function ($) {
                 slidesToScroll: 1
               }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
           ]
     });
 
@@ -53,8 +50,16 @@ jQuery(function ($) {
 
     // Form search
     $('.rgc-custom-filter-form input[type="submit"]').replaceWith("<button type='submit' class='btn-filter-submit'><i class='fas fa-search mr-1'></i> BUSCAR</button>");
-    // $('.rgc-custom-filter-form h4').css('text-align','left');
-    // $('.rgc-custom-filter-form h4').css('margin','0px 0px 5px 0px');
-
     $('.item-profile-user a').prepend('<i class="fas fa-user mr-2"></i>');
+
+    // Dashboard
+    $('.page-template-dashboard-page #rgc-link-wompi').click(function(e){
+      e.preventDefault();
+
+      $('.page-template-dashboard-page #app').html(`<div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://checkout.wompi.co/l/VPOS_7I4m3m?_ga=2.216064982.1381501100.1589493062-1840642752.1587081128" frameborder="0">    </iframe>
+   </div>`);
+    })
+
+    
 });

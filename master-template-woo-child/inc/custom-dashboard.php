@@ -68,7 +68,7 @@ function dcms_items_login_logout( $items, $args ) {
 		if (is_user_logged_in())
 		{
 			$items .= '<li class="menu-item btn-menu btn-logout">
-						<a class="nav-link" title="salir" href="'. wp_logout_url(get_permalink()) .'"><i class="fas fa-power-off"></i></a>
+						<a class="nav-link" title="salir" href="'. wp_logout_url(get_home_url()) .'"><i class="fas fa-power-off"></i></a>
 						</li>';
 		}
 	}
