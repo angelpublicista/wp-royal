@@ -134,7 +134,22 @@ textarea.form-control {
 .rgc-sub-heading-section .rgc-intro__right h3 {
   font-family: "Nunito", sans-serif !important;
 }
+.rgc-sub-heading-section.opacity-layer:before {
+  background-color: rgba(251, 187, 1, 0.8) !important;
+}
 
+@media (max-width: 480px) {
+  .rgc-sub-heading-section {
+    padding: 1em !important;
+  }
+  .rgc-sub-heading-section .rgc-intro__left h2 {
+    font-size: 1em !important;
+  }
+  .rgc-sub-heading-section .rgc-intro__right h3 {
+    font-size: 1.5em !important;
+    margin-top: 2em;
+  }
+}
 .rgc-card-package {
   font-size: 10pt;
   margin: 2em;
@@ -281,6 +296,14 @@ textarea.form-control {
   transform: scale(0.9);
 }
 
+@media (max-width: 480px) {
+  .rgc-card-package .button-master {
+    font-size: 1em !important;
+  }
+  .rgc-card-package__info .rgc-content-package__desc {
+    display: none;
+  }
+}
 .slick-custom-rgc .slick-custom-arrow {
   background-color: #E0831F;
   width: 50px;
@@ -400,6 +423,11 @@ textarea.form-control {
   color: #E0831F;
 }
 
+@media (max-width: 480px) {
+  .info-bottom-footer {
+    margin-top: 4;
+  }
+}
 .footer-contact {
   font-size: 12pt !important;
 }
@@ -437,6 +465,14 @@ textarea.form-control {
   font-size: 90px;
 }
 
+@media (max-width: 480px) {
+  .elementor-page-55 .sub-heading-section {
+    padding: 2em !important;
+  }
+  .elementor-page-55 .sub-heading-section h1 {
+    font-size: 2.5em !important;
+  }
+}
 .rgc-user-block {
   min-height: 80vh;
 }
@@ -502,6 +538,14 @@ textarea.form-control {
   display: inline-block !important;
 }
 
+@media (max-width: 480px) {
+  .rgc-search-bar {
+    box-sizing: border-box;
+    padding: 2em 1em;
+    margin: 0;
+    margin-bottom: -10px;
+  }
+}
 .rgc-card-archive {
   overflow: hidden;
 }
@@ -595,6 +639,28 @@ textarea.form-control {
 @media screen and (max-width: 480px) {
   .rgc-dashboard-main, .rgc-dashboard-sidebar, .rgc-dashboard-content {
     height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .box-menu-nav-mobile {
+    background-color: #e79217 !important;
+  }
+  .box-menu-nav-mobile .box-logo {
+    text-align: center !important;
+  }
+  .box-menu-nav-mobile .box-logo img {
+    max-width: 100px !important;
+  }
+  .box-menu-nav-mobile .box-menu-nav .menu-menu-registrados-container a {
+    color: white !important;
+  }
+  .box-menu-nav-mobile .box-menu-nav .menu-menu-registrados-container .item-profile-user {
+    background: transparent !important;
+    border-radius: 0px;
+    font-size: 1em !important;
+  }
+  .box-menu-nav-mobile .box-menu-nav .menu-menu-registrados-container .btn-logout a {
+    font-size: 1em !important;
   }
 }
 
