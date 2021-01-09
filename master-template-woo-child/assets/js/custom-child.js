@@ -1,4 +1,6 @@
-console.log('El custom js funciona')
+console.log('El custom js funciona');
+
+
 
 jQuery(function ($) {
     $('.rgc-content-package__gallery').slick({
@@ -34,7 +36,8 @@ jQuery(function ($) {
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode: false
+                centerMode: false,
+                dots: false
               }
             }
           ]

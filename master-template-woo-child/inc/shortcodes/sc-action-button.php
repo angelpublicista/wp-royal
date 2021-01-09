@@ -20,7 +20,9 @@ if(!function_exists('rgc_action_button_func')){
         <?php if($tipo_reserva != "Por defecto"): ?>
                 <a href="<?php echo $link_reserva; ?>" class="button-master principal-button button-rounded my-3" target="_blank">RESERVAR AHORA</a>
         <?php else: ?>
-                <?php echo do_shortcode( '[contact-form-7 id="434" title="Reserva paquetes"]' );?>
+                <div style="margin-bottom: -4em;">
+                     <?php echo do_shortcode( '[contact-form-7 id="434" title="Reserva paquetes"]' );?>
+                </div>
         <?php endif; ?>
         <?php
         return ob_get_clean();

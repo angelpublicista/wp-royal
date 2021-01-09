@@ -76,6 +76,21 @@ get_header();
                         <?php endif; ?>
                     </div>
 
+                    <?php if(get_field('fecha_salida')): ?>
+                    <?php
+
+                        // Load field value and convert to numeric timestamp.
+                        $unixtimestamp = strtotime( get_field('fecha_salida') );
+
+                        // Display date in the format "l d F, Y".
+                        $date_start = date_i18n( "l d F, Y", $unixtimestamp ); 
+                    ?>
+
+                    <div class="rgc-content-package__date">
+                        <span class="rgc-content-package__date-start"><i class="far fa-calendar-alt"></i> Fecha salida: <?php echo $date_start; ?></span>
+                    </div>
+                    <?php endif; ?>
+
                     <p class="rgc-content-package__desc"><?php the_content(); ?></p>
                 
                     <div class="rgc-content-package__price">
@@ -90,13 +105,38 @@ get_header();
                        $precio_no_afiliados = $no_afiliados['precio_no_afiliados'];
                        $condicion_no_afiliados = $no_afiliados['condiciones_no_afiliado'];
                     ?> 
-                        <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
-                        <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo $condicion_no_afiliados; ?></span></span>
+                        <?php if($precio_afiliados): ?>
+                            <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
+                        <?php endif; ?>
+                        
+                        <?php if($precio_no_afiliados): ?>
+                            <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo $condicion_no_afiliados; ?></span></span>
+                        <?php endif; ?>
+
+                        <?php if(get_field('fecha_limite')): ?>
+                            <?php
+                                // Load field value.
+                            $date_string = get_field('fecha_limite');
+
+                            $new_date = strtotime($date_string);
+                            // Output current date in custom format.
+                            $date_current = date('Y-m-d');
+
+                            $date1 = new DateTime($date_current);
+                            $date2 = new DateTime($date_string);
+                            $diff = $date1->diff($date2);
+
+                            
+                            ?>
+                            <span class="mt-4 d-block rgc-content-package__date-limit">Paquete válido hasta: <?php echo date_i18n( "l d F, Y", $new_date ); ?></span>
+                        <?php endif; ?>
                     </div>
-                    
-                    <div class="text-center">
-                     <?php echo do_shortcode( "[rgc_action_button]" )?>
-                    </div>
+
+                    <?php if($diff->invert < 1): ?>
+                        <div class="text-center">
+                        <?php echo do_shortcode( "[rgc_action_button]" )?>
+                        </div>
+                    <?php endif; ?>
                     
                 </div>
             </div>

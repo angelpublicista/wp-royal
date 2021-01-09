@@ -1,7 +1,10 @@
 console.log("Carga login")
 
+
+
 jQuery(function ($) {
-    $('#loginform, #lostpasswordform').prepend("<img src='http://royal-golden-group.local/wp-content/themes/master-template-woo-child/assets/img/logo-royal-color.png' style='display: block; margin: auto'>");
+    $('.login').css('background-image', `url(${vars_inline.varHome}/wp-content/themes/master-template-woo-child/assets/img/bg-login.png)`);
+    $('#loginform, #lostpasswordform').prepend(`<img src='${vars_inline.varHome}/wp-content/themes/master-template-woo-child/assets/img/logo-royal-color.png' style='display: block; margin: auto'>`);
     $('#loginform').addClass('shadow')
 
     $('#login h1').html('<span class="rgc-login-title">INICIAR SESIÓN</span>')
