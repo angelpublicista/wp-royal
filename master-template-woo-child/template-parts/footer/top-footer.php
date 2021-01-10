@@ -10,6 +10,11 @@
 global $geniorama
 ?>
 
+<div class="rgc-widget-dollar p-3">
+	<p>Dolar hoy</p>
+	<span id="dollar-price"></span>
+</div>
+
 
 <div class="top-footer bg-image" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/background-top-footer.png')">
 	<div class="container">

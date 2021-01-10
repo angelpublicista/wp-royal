@@ -472,6 +472,31 @@ textarea.form-control {
   text-decoration: underline;
 }
 
+.rgc-widget-dollar {
+  position: fixed;
+  right: 0;
+  bottom: 9em;
+  background-color: #010077;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.rgc-widget-dollar span, .rgc-widget-dollar p {
+  color: white;
+  display: block;
+}
+.rgc-widget-dollar p {
+  margin-bottom: 0;
+  color: #E0831F;
+}
+
+@media screen and (max-width: 480px) {
+  .rgc-widget-dollar {
+    display: none !important;
+  }
+}
 .embed-responsive .embed-responsive-item {
   width: 100%;
   min-height: 520px;

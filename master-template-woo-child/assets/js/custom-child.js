@@ -65,5 +65,26 @@ jQuery(function ($) {
    </div>`);
     })
 
+    const formatter = new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      minimumFractionDigits: 0
+    })
+
+    // Api Dollar
+    const div_dollar = document.getElementById('dollar-price')
+
+    if(div_dollar){
+      let url_api = "https://s3.amazonaws.com/dolartoday/data.json";
+
+      fetch(url_api)
+      .then(res => res.json())
+      .then(data => {
+        let dollar_cop = data["USDCOL"]["ratetrm"]
+
+        div_dollar.innerHTML = "$ " + dollar_cop + " <small>COP</small>"
+      })
+    }
+
     
 });

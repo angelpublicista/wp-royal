@@ -12,3 +12,25 @@
         color: #E0831F !important
         font-size: 1.5em !important
         text-decoration: underline
+.rgc-widget-dollar
+    position: fixed
+    right: 0
+    bottom: 9em
+    background-color: $primary-color
+    color: white
+    display: flex
+    flex-direction: column 
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+    span, p
+        color: white
+        display: block
+    p
+        margin-bottom: 0
+        color: $secondary-color
+
+@media screen and ( max-width: 480px )
+    .rgc-widget-dollar
+        display: none !important
+    
+        
