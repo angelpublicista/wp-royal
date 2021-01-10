@@ -112,6 +112,19 @@ textarea.form-control {
   display: none !important;
 }
 
+.bottom-header ul {
+  align-items: center;
+}
+
+.sticky-header {
+  z-index: 2 !important;
+  -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.sticky-header .menu-item-has-children .sub-menu a {
+  color: white !important;
+}
+
 .rgc-sub-heading-section {
   color: white;
 }
