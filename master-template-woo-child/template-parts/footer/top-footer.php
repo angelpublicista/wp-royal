@@ -11,7 +11,7 @@ global $geniorama
 ?>
 
 <div class="rgc-widget-dollar p-3">
-	<p>Dolar hoy</p>
+	<p>Dólar hoy</p>
 	<span id="dollar-price"></span>
 </div>
 

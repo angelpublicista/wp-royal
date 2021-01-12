@@ -495,14 +495,15 @@ textarea.form-control {
 
 .rgc-widget-dollar {
   position: fixed;
-  right: 0;
-  bottom: 9em;
+  left: 0;
+  bottom: 2em;
   background-color: #010077;
   color: white;
   display: flex;
   flex-direction: column;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 2;
 }
 .rgc-widget-dollar span, .rgc-widget-dollar p {
   color: white;

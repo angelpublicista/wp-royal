@@ -75,14 +75,18 @@ jQuery(function ($) {
     const div_dollar = document.getElementById('dollar-price')
 
     if(div_dollar){
-      let url_api = "https://s3.amazonaws.com/dolartoday/data.json";
+      let current_date = moment().format('Y-MM-D');
+      /*
+      API Documentation:
+      https://github.com/MakawDev/TRM-Colombia
+      */
+      let url_api = `https://trm-colombia.vercel.app/?date=${current_date}`;
 
       fetch(url_api)
       .then(res => res.json())
       .then(data => {
-        let dollar_cop = data["USDCOL"]["ratetrm"]
-
-        div_dollar.innerHTML = "$ " + dollar_cop + " <small>COP</small>"
+        $dolar_today = data['data']['value']
+        div_dollar.innerHTML = "$" + $dolar_today + " <small>cop</small>"
       })
     }
 
