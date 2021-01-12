@@ -136,53 +136,54 @@ get_header();
 
     <!-- Incluye -->
 
-    
-    <section class="padding-section rgc-include">
-        <div class="container">
-            <div class="rgc-box-title text-center mb-5">
-                <h3>INCLUYE</h3>
-                <hr class="rgc-box-title__divider">
-            </div>
-            
-            <div class="row rgc-package-features text-left">
-
-                <?php
-                $features = get_field('incluye');
-                foreach($features as $item_feature): ?>
-
-                <?php 
-                    switch($item_feature){
-                        case "Alojamiento":
-                            $icon = '<i class="fas fa-bed"></i>';
-                            break;
-                        case "Parqueadero":
-                            $icon = '<i class="fas fa-parking"></i>';
-                            break;
-                        case "Transporte":
-                            $icon = '<i class="fas fa-bus"></i>';
-                            break;
-                        case "Alimentación":
-                            $icon = '<i class="fas fa-utensils"></i>';
-                            break;
-                        case "Acceso a piscina":
-                            $icon = '<i class="fas fa-swimming-pool"></i>';
-                            break;
-                        case "Bebidas":
-                            $icon = '<i class="fas fa-cocktail"></i>';
-                            break;
-                        default:
-                            $icon = '<i class="fas fa-check-circle"></i>';
-                    }
-                ?>
-
-                <div class="col-6 col-md-4 rgc-package-features__box mb-3">
-                    <?php echo $icon; ?>
-                    <span class="rgc-package-features__box-text"><?php echo $item_feature ?></span>
+    <?php if(get_field('incluye')): ?>
+        <section class="padding-section rgc-include">
+            <div class="container">
+                <div class="rgc-box-title text-center mb-5">
+                    <h3>INCLUYE</h3>
+                    <hr class="rgc-box-title__divider">
                 </div>
-                <?php endforeach; ?>
+                
+                <div class="row rgc-package-features text-left">
+
+                    <?php
+                    $features = get_field('incluye');
+                    foreach($features as $item_feature): ?>
+
+                    <?php 
+                        switch($item_feature){
+                            case "Alojamiento":
+                                $icon = '<i class="fas fa-bed"></i>';
+                                break;
+                            case "Parqueadero":
+                                $icon = '<i class="fas fa-parking"></i>';
+                                break;
+                            case "Transporte":
+                                $icon = '<i class="fas fa-bus"></i>';
+                                break;
+                            case "Alimentación":
+                                $icon = '<i class="fas fa-utensils"></i>';
+                                break;
+                            case "Acceso a piscina":
+                                $icon = '<i class="fas fa-swimming-pool"></i>';
+                                break;
+                            case "Bebidas":
+                                $icon = '<i class="fas fa-cocktail"></i>';
+                                break;
+                            default:
+                                $icon = '<i class="fas fa-check-circle"></i>';
+                        }
+                    ?>
+
+                    <div class="col-6 col-md-4 rgc-package-features__box mb-3">
+                        <?php echo $icon; ?>
+                        <span class="rgc-package-features__box-text"><?php echo $item_feature ?></span>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <!-- Términos y condiciones -->
     <?php if(get_field('terminos_y_condiciones')): ?>
