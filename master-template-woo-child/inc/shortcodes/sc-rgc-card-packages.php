@@ -42,18 +42,9 @@ if(!function_exists('rgc_card_packages_func')){
                 </div>
 
                 <?php if(get_field('fecha_salida')): ?>
-                <?php
-
-                    // Load field value and convert to numeric timestamp.
-                    $unixtimestamp = strtotime( get_field('fecha_salida') );
-
-                    // Display date in the format "l d F, Y".
-                    $date_start = date_i18n( "l d F, Y", $unixtimestamp ); 
-                ?>
-
-                <div class="rgc-content-package__date">
-                    <span class="rgc-content-package__date-start"><i class="far fa-calendar-alt"></i> Fecha salida: <?php echo $date_start; ?></span>
-                </div>
+                    <div class="rgc-content-package__date">
+                        <span class="rgc-content-package__date-start"><i class="far fa-calendar-alt"></i> Fecha(s) salida: <?php the_field('fecha_salida'); ?></span>
+                    </div>
                 <?php endif; ?>
                 <hr>
                 <div class="rgc-content-package__desc mb-3"><?php echo mb_strimwidth(get_the_content(), 0, 200, '...') ?></div>
@@ -71,11 +62,11 @@ if(!function_exists('rgc_card_packages_func')){
                 ?> 
 
                     <?php if($precio_afiliados): ?>
-                        <span class="rgc-content-package__price-reduced d-block"><span class="rgc-content-package__text-afiliados d-block">Tarifa Afiliado</span>$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition d-block"> <?php echo $condicion_afiliados; ?></span></span>
+                        <span class="rgc-content-package__price-reduced d-block"><span class="rgc-content-package__text-afiliados d-block">Tarifa Afiliado</span>$<b><?php echo $precio_afiliados; ?></b> <br><span class="rgc-content-package__price-reduced__condition d-block"> <?php echo $condicion_afiliados; ?></span></span>
                     <?php endif; ?>
 
                     <?php if($precio_no_afiliados): ?>
-                        <span class="rgc-content-package__price-normal d-none d-md-block"><span class="rgc-content-package__text-noafiliados d-block">Tarifa No afiliado</span> $<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition d-block"> <?php echo   $condicion_no_afiliados; ?></span></span>
+                        <span class="rgc-content-package__price-normal d-none d-md-block"><span class="rgc-content-package__text-noafiliados d-block">Tarifa No afiliado</span> $<b><?php echo $precio_no_afiliados; ?></b> <br><span class="rgc-content-package__price-normal__condition d-block"> <?php echo   $condicion_no_afiliados; ?></span></span>
                     <?php endif; ?>
                 </div>
 

@@ -77,17 +77,8 @@ get_header();
                     </div>
 
                     <?php if(get_field('fecha_salida')): ?>
-                    <?php
-
-                        // Load field value and convert to numeric timestamp.
-                        $unixtimestamp = strtotime( get_field('fecha_salida') );
-
-                        // Display date in the format "l d F, Y".
-                        $date_start = date_i18n( "l d F, Y", $unixtimestamp ); 
-                    ?>
-
                     <div class="rgc-content-package__date">
-                        <span class="rgc-content-package__date-start"><i class="far fa-calendar-alt"></i> Fecha salida: <?php echo $date_start; ?></span>
+                        <span class="rgc-content-package__date-start"><i class="far fa-calendar-alt"></i> Fecha(s) salida: <?php the_field('fecha_salida') ?></span>
                     </div>
                     <?php endif; ?>
 
@@ -106,11 +97,11 @@ get_header();
                        $condicion_no_afiliados = $no_afiliados['condiciones_no_afiliado'];
                     ?> 
                         <?php if($precio_afiliados): ?>
-                            <span class="rgc-content-package__price-reduced">$<?php echo $precio_afiliados; ?> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
+                            <span class="rgc-content-package__price-reduced">$<b><?php echo $precio_afiliados; ?></b> <br><span class="rgc-content-package__price-reduced__condition"> <?php echo $condicion_afiliados; ?></span></span>
                         <?php endif; ?>
                         
                         <?php if($precio_no_afiliados): ?>
-                            <span class="rgc-content-package__price-normal">$<?php echo $precio_no_afiliados; ?> <br><span class="rgc-content-package__price-normal__condition"> <?php echo $condicion_no_afiliados; ?></span></span>
+                            <span class="rgc-content-package__price-normal">$<b><?php echo $precio_no_afiliados; ?></b> <br><span class="rgc-content-package__price-normal__condition"> <?php echo $condicion_no_afiliados; ?></span></span>
                         <?php endif; ?>
 
                         <?php if(get_field('fecha_limite')): ?>

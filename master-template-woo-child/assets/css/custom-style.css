@@ -574,6 +574,11 @@ textarea.form-control {
 .rgc-custom-filter-form ul li {
   text-align: left !important;
 }
+.rgc-custom-filter-form .clean-input {
+  margin-left: -1.1em;
+  color: #BD0606;
+  cursor: pointer;
+}
 .rgc-custom-filter-form input, .rgc-custom-filter-form select {
   border: 1px solid #BCBCBC !important;
   height: 50px;

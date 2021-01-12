@@ -90,5 +90,53 @@ jQuery(function ($) {
       })
     }
 
+
+    $(".button-pse .nav-link").attr('target', '_blank')
+
+    $(".rgc-custom-filter-form input[name='ofsearch']").attr('id', 'ofsearch')
+
+    if($(".rgc-custom-filter-form input[type='text']").val().length > 0){
+      $(".rgc-custom-filter-form input[type='text']").after("<span class='clean-input' data-input='ofsearch'>x</span>");
+
+      $(".rgc-custom-filter-form .clean-input").click(function(){
+          $data_input = $(this).attr('data-input')
+          $("#" + $data_input).val('');
+          $(this).hide()
+      });
+    }
     
 });
+
+
+function formatNumber(numVal)
+{
+var num = numVal;
+if(!isNaN(num)){
+num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+num = num.split('').reverse().join('').replace(/^[\.]/,'');
+
+return num
+}
+
+}
+
+let priceReduced = document.querySelectorAll('.rgc-content-package__price-reduced b')
+let priceNormal = document.querySelectorAll('.rgc-content-package__price-normal b')
+
+if (priceReduced) {
+  for(let price of priceReduced){
+    let intPrice = parseInt(price.textContent)
+    let priceFormat = formatNumber(intPrice)
+
+    price.textContent = priceFormat
+  }
+}
+
+if (priceNormal) {
+  for(let price of priceNormal){
+    let intPrice = parseInt(price.textContent)
+    let priceFormat = formatNumber(intPrice)
+
+    price.textContent = priceFormat
+  }
+}

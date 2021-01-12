@@ -39,7 +39,13 @@ add_action('admin_init', 'restrict_access_admin_panel', 1);
 
 
 // Ocultar barra admin
-add_filter( 'show_admin_bar', '__return_false' );
+$current_user = wp_get_current_user();
+if ( user_can( $current_user, "subscriber" ) ){
+    // Check user object has not got subscriber role
+    add_filter( 'show_admin_bar', '__return_false' );
+} 
+
+
 
 
 add_filter( 'wp_nav_menu_objects', 'my_dynamic_menu_items' );
