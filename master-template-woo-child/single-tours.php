@@ -91,7 +91,7 @@ get_header();
                     </div>
                     <?php endif; ?>
 
-                    <p class="rgc-content-package__desc"><?php the_content(); ?></p>
+                    <div class="rgc-content-package__desc"><?php the_content(); ?></div>
                 
                     <div class="rgc-content-package__price">
                     <?php 

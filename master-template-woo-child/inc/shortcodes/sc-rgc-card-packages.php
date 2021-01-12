@@ -56,7 +56,7 @@ if(!function_exists('rgc_card_packages_func')){
                 </div>
                 <?php endif; ?>
                 <hr>
-                <div class="rgc-content-package__desc"><?php the_content(); ?></div>
+                <div class="rgc-content-package__desc mb-3"><?php echo mb_strimwidth(get_the_content(), 0, 200, '...') ?></div>
                 <div class="rgc-content-package__price">
                 <?php 
                     // Info afiliados

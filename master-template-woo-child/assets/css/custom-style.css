@@ -445,6 +445,14 @@ textarea.form-control {
   border-right: 2px solid #010077;
 }
 
+.single-tours .rgc-content-package__desc {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
 .top-footer .footer-pbx p {
   font-family: "Nunito", sans-serif !important;
   font-size: 2em;
@@ -709,6 +717,15 @@ textarea.form-control {
   .box-menu-nav-mobile .box-menu-nav .menu-menu-registrados-container .btn-logout a {
     font-size: 1em !important;
   }
+}
+.rgc-main-404 {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+.rgc-main-404 img {
+  max-width: 200px !important;
+  transform: rotate(-25deg);
 }
 
 /*# sourceMappingURL=custom-style.css.map */
